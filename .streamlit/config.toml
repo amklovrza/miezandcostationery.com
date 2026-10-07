@@ -1,0 +1,7 @@
+[theme]
+backgroundColor = "#2B2F36"
+textColor = "#f8e3c6"
+[theme.sidebar]
+backgroundColor = "#24282e"
+[client]
+toolbarMode = "minimal"
