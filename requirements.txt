@@ -1,0 +1,11 @@
+streamlit
+streamlit.errors
+pandas
+plotly
+plotly.express
+stripe
+os
+pathlib
+hashlib
+hmac
+base64
