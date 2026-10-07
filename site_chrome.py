@@ -175,7 +175,7 @@ def render_support_categories() -> None:
             st.header("Support")
             st.subheader("If you need assistance, you've come to the right place!")
             st.page_link(
-                "pages/5_Contact_FAQ.py",
+                "pages/3_Contact_FAQ.py",
                 label="Contact || FAQ || Terms and Conditions",
                 icon=":material/arrow_forward:",
                 width="stretch",
