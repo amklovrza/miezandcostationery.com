@@ -26,15 +26,14 @@ CUSTOMER_FIELDS = [
     "Postal Code",
     "Preferred Payment Method",
 ]
-PRODUCTS = ["Bloquinho", "Marca página", "Caneta", "Livro de Receitas", "Adesivos"]
-PAYMENT_METHODS = ["Credit/debit card", "PayPal", "Cash", "Other"]
+PRODUCTS = ["Notepad", "Notebook", "Bookmarker", "Sticker"]
+PAYMENT_METHODS = ["Credit/debit card", "PayPal", "Venmo", "Zelle"]
 CUSTOMER_CART_COLUMNS = ["Email", "Product", "Quantity"]
 STRIPE_PRICE_ENV_VARS = {
-    "Bloquinho": "STRIPE_PRICE_ID_BLOQUINHO",
-    "Marca página": "STRIPE_PRICE_ID_MARCA_PAGINA",
-    "Caneta": "STRIPE_PRICE_ID_CANETA",
-    "Livro de Receitas": "STRIPE_PRICE_ID_LIVRO_DE_RECEITAS",
-    "Adesivos": "STRIPE_PRICE_ID_ADESIVOS",
+    "Notepad": "STRIPE_PRICE_ID_BLOQUINHO",
+    "Bookmarker": "STRIPE_PRICE_ID_MARCA_PAGINA",
+    "Notebook": "STRIPE_PRICE_ID_CADERNO",
+    "Sticker": "STRIPE_PRICE_ID_ADESIVOS",
 }
 COUNTRY_CALLING_CODES = [
     ("United States / Canada (+1)", "+1"),
@@ -338,14 +337,14 @@ else:
                     country_calling_code = st.selectbox("Country code", COUNTRY_CALLING_CODES, format_func=lambda option: option[0],)[1]
                 with phone_col2:
                     phone = st.text_input("Cellphone number")
-                address = st.text_input("Address")
-                address2 = st.text_input("House/Unit/Apartment number")
-                city = st.text_input("City")
-                state = st.text_input("State")
-                postal_code = st.text_input("Postal Code")
-                registration_password = st.text_input("Password", type="password")
-                confirm_password = st.text_input("Confirm password", type="password")
-                register = st.form_submit_button("Register")
+                    address = st.text_input("Address")
+                    address2 = st.text_input("House/Unit/Apartment number")
+                    city = st.text_input("City")
+                    state = st.text_input("State")
+                    postal_code = st.text_input("Postal Code")
+                    registration_password = st.text_input("Password", type="password")
+                    confirm_password = st.text_input("Confirm password", type="password")
+                    register = st.form_submit_button("Register")
 
         if register:
             email = registration_email.strip().casefold()
